@@ -1,0 +1,80 @@
+요구사항 분석시 사용할(벤치마킹)
+사이트 하나 선정합니다(개별)
+jwg1323
+01023753058
+
+:q
+:q! 강제로 나가기
+git branch -M -> master 이름 바꾸기
+
+git init git 초기화
+
+작업
+
+git add - > staging area 저장
+
+git commit -m "메시지"  local repository 에 저장
+
+[되돌리기]            
+git reset  --soft                 wd, sa, lr
+            -- mixed
+            --hard 
+
+[merge]
+
+git branch [브랜치명]
+git switch [브랜치명] / git checkout [브랜치명]
+git merge [브랜치명] - F.F(commit 새로 생성 x)
+
+충돌발생
+git merge --continue(N.F.F commit 새로 생성 o)
+
+
+GIT BASH PWD 현재위치확인
+CD downloads/GIT-TEST 작업할 위치 지정
+명령어 전역
+
+merge --abort 충돌 무시 병합
+//         continue 충돌 해결 후 병합
+후 :q 나가기
+
+branch 생성
+git branch 브랜치명
+
+branch 이동
+git switch 브랜치명
+git checkout 브랜치명
+
+branch 확인
+git branch 
+
+branch 병합
+1 병합되는 branch 로 이동 (git branch master)
+2 병합시도 (git merge dev - fastForward)
+
+branch 병합 -충돌 시
+1 병합되는 branch 로 이동(git branch master)
+2 병합시도( git merge dev) -> 충돌발생!
+3 fixed -> git add * -> git merge --contineu
+(none fast Forward merge - 커밋시점 새로 만든다)
+4 git switch dev -> git merge master
+
+0 새폴더에서 git init 명령어 사용
+1 aaa.txt 파일을 추가하고 내용입력(아무거나) 
+2 SA 에 추가후 Commit(message V0.0)
+2 bbb.txt 파일을 추가하고 내용입력(아무거나) 
+3 SA 에 추가후 Commit(message V0.1)
+4 ccc.txt 파일을 추가하고 내용입력(아무거나) 
+5 SA 에 추가후 Commit(message V0.2)
+-----------------------------------------------------------------------
+6 branch 생성 (dev,feature)
+7 feature branch에서 작업 진행
+8 feature 에서 ddd.txt 파일생성후 내용입력 -> commit(V0.3)
+9 feature 에서 dev으로 merging 작업수행
+10 dev branch 에서 aaa.txt 내용 추가 -> commit(V0.4 by dev)
+11 feature branch 에서 aaa.txt 내용 추가 -> commit(V0.4 feature)
+12 Conflict 해결 이후 dev에 병합
+13 dev 내용 master에 병합
+
+draw.io
+
